@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
  
-var artical={
- 'artical-one':{
+var articals={
+ 'artical-one': {
    title:'artical one|Afreen',
    heading:'artical one',
    date:'feb 16 2017',
@@ -21,7 +21,7 @@ var artical={
             This is my first web app.  This is my first web app. This is my first web app. This is my first web app. This is my first web app.This is my first web app. This is my first web app. This is my first web app. This is my first web app. This is my first web app.
    </p>`
  },
- 'artical-two':{
+ 'artical-two': {
    title:'artical two|Afreen',
    heading:'artical two',
    date:'feb 16 2017',
@@ -30,7 +30,7 @@ var artical={
             This is my second web app. 
    </p>`  
  },
- 'artical-three':{
+ 'artical-three': {
    title:'artical three|Afreen',
    heading:'artical three',
    date:'feb 16 2017',
@@ -40,7 +40,7 @@ var artical={
    </p>`
  }
  };
-function createTemplate (data){ 
+function createTemplate (data) { 
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
@@ -82,7 +82,7 @@ app.get('/', function (req, res) {
  
  app.get('/:articalName',function (req,res) {
    var articalName = req.params.articalName;
-   res.send(createTemplate(artical[articalName]));
+   res.send(createTemplate(articals[articalName]));
  });
 
 app.get('/ui/style.css', function (req, res) {
