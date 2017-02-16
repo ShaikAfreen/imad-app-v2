@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
  
 var artical={
- 'artical-One':{
+ 'artical-one':{
    title:'artical one|Afreen',
    heading:'artical one',
    date:'feb 16 2017',
@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
 });
  
  app.get('/:articalName',function (req,res) {
-   var articalName=reg.params.articalName;
+   var articalName = reg.params.articalName;
    res.send(createTemplate(articals[articalName]));
  });
 
