@@ -76,6 +76,7 @@ function createTemplate (data) {
    `;
     return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -85,6 +86,7 @@ app.get('/', function (req, res) {
      counter = counter + 1;
      res.send(counter.toString());
  });
+ 
  app.get('/:articalName',function (req,res) {
    var articalName = req.params.articalName;
    res.send(createTemplate(articals[articalName]));
@@ -93,6 +95,7 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
