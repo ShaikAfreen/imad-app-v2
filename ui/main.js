@@ -18,4 +18,4 @@ button.onclick = function () {
     //make the request
     request.open('GET','http://shaikafreen.imad.hasura-app.io/counter',true);
     request.send(null);
-}
+} 
