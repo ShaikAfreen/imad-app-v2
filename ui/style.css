@@ -16,13 +16,13 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 100px;
 }
 .container {
     max-width:800px;
     margin:0 auto;
     color:gray;
     font-family:sans-serlf;
-    padding-left:50px;
-    padding-right:50px;
+    padding-left:10px;
+    padding-right:10px;
  }
