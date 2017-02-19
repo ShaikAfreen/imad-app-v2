@@ -36,8 +36,8 @@ submit.onclick = function() {
                 for (var i=0;i< names.length; i++) {
                     list += '<li>'+names[i]+ '</li>';
                 }
-                var ui = document.getElementById('namelist');
-                ui.innerHTML = list;
+                var ul = document.getElementById('namelist');
+                ul.innerHTML = list;
             }
         }
         //not done  yet
@@ -45,7 +45,7 @@ submit.onclick = function() {
     //make the request
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
-    request.open('GET','http://shaikafreen.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.open('GET','http://shaikafreen.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
     
 };
