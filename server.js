@@ -15,7 +15,7 @@ app.use(morgan('combined'));
  
 var articals={
  'artical-one': {
-   title:'artical one|Afreen',
+   title:'artical-one',
    heading:'artical one',
    date:'feb 16 2017',
    content:`
@@ -30,7 +30,7 @@ var articals={
    </p>`
  },
  'artical-two': {
-   title:'artical two|Afreen',
+   title:'artical-two',
    heading:'artical two',
    date:'feb 16 2017',
    content:`
@@ -39,7 +39,7 @@ var articals={
    </p>`  
  },
  'artical-three': {
-   title:'artical three|Afreen',
+   title:'artical-three',
    heading:'artical three',
    date:'feb 16 2017',
    content:`
@@ -115,7 +115,7 @@ app.get('/submit-name', function (req, res){
   res.send(JSON.stringify(names));
 });
 
- app.get('/articles/:articalName', function (req,res) {
+ app.get('/articals/:articalName', function (req,res) {
      
   pool.query("SELECT *FROM artical WHERE title= "+req.params.articalName , function (err,result){
       if(err){
